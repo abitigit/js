@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <h2>Expense Tracker</h2>
+    <div id="expense-tracker-parent">
+      <!-- Add Expense Form Start -->
+      <div id="addExpenseRoot" data-testid="add-expense-root">
+        <h3 id="expenseActionTitle">Add Expense</h3>
+
+        <div data-testid="title-wrapper">
+          <!-- Implement title input here -->
+        </div>
+
+        <div data-testid="amount-wrapper">
+          <!-- Implement amount input here -->
+        </div>
+
+        <div data-testid="date-wrapper">
+          <!-- Implement date input here -->
+        </div>
+
+        <div data-testid="add-or-update-expense-wrapper">
+          <!-- Implement add/update expense button here -->
+          <!-- Hint: Use handleExpense() method to manage button click for add/update expense -->
+        </div>
+
+        <div data-testid="message-wrapper">
+          <!-- Show success or error message here -->
+        </div>
+      </div>
+
+      <!-- Add Expense Form End -->
+      <div data-testid="expense-list-root">
+        <h3>Expense List</h3>
+
+        <p id="noExpenseMessage"></p>
+        <div id="expenseInfo">
+          <!-- Expense List Start -->
+          <div data-testid="expense-list-table-wrapper">
+            <!-- Implement expense list table here -->
+            <table id="expenseTable">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th onclick="handleSort(1)">Amount (USD)</th>
+                  <th onclick="handleSort(2)">Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <!-- Expense List End -->
+
+          <div data-testid="expense-list-message-wrapper">
+            <!-- Show success message here after expense deletion -->
+          </div>
+
+          <!-- Total Expense Value Start -->
+          <div class="total-expense-wrapper" data-testid="total-expense-root">
+            <p>Total Expense (USD):</p>
+            <p id="totalExpenseValue" data-testid="total-expense-value"></p>
+          </div>
+          <!-- Total Expense Value End -->
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

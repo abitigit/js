@@ -1,0 +1,26 @@
+{
+  "name": "javascript-apt",
+  "version": "1.0.0",
+  "description": "Javascript Full-Stack APT",
+  "scripts": {
+    "test": "jest --watchAll=false --runInBand --config=jest.config.js",
+    "test:hidden": "jest --watchAll=false --silent --config=jest.config.js -- src/tests/*_hidden.test.js",
+    "start": "node custom-start.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-transform-runtime": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@jest/reporters": "^29.7.0",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@types/jest": "^29.5.11",
+    "babel-jest": "^29.7.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^23.2.0"
+  }  
+}
