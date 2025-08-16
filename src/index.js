@@ -152,7 +152,7 @@ function deleteExpense(id) {
   expenses = expenses.filter((exp) => exp.id !== id);
   localStorage.setItem("expenses", JSON.stringify(expenses));
   renderExpenses();
-  const message = document.querySelector("[data-testid='expense-list-message-wrapper']");
+  const message = document.getElementById("delete-message");
   message.textContent = messages.deleteSuccess;
   setTimeout(() => {
     message.textContent = "";

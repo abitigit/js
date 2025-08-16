@@ -133,16 +133,18 @@ td {
     background-color: #c82333;
 }
 
-[data-testid='expense-list-message-wrapper'] {
+#delete-message {
     margin-top: 15px;
     color: #2e7d32;
+    font-weight: bold;
 }
 
 .total-expense-wrapper {
     margin-top: 20px;
-    text-align: right;
+    text-align: left;
     font-weight: bold;
     font-size: 1.1em;
+    width: 100%;
 }
 
 #noExpenseMessage {
