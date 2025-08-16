@@ -37,7 +37,7 @@ describe("Task_3_Main", () => {
 
     editButton.click();
 
-    expect(document.getElementsByTagName("h3")[0].innerHTML).toBe(
+    expect(document.getElementById("expenseActionTitle").innerHTML).toBe(
       "Update Expense"
     );
   });

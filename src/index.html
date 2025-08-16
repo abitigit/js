@@ -14,24 +14,27 @@
         <h3 id="expenseActionTitle">Add Expense</h3>
 
         <div data-testid="title-wrapper">
-          <!-- Implement title input here -->
+          <label for="title">Title:</label>
+          <input type="text" id="title" />
         </div>
 
         <div data-testid="amount-wrapper">
-          <!-- Implement amount input here -->
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" />
         </div>
 
         <div data-testid="date-wrapper">
-          <!-- Implement date input here -->
+          <label for="date">Date:</label>
+          <input type="date" id="date" placeholder="dd / mm / yyyy" />
         </div>
 
         <div data-testid="add-or-update-expense-wrapper">
-          <!-- Implement add/update expense button here -->
+          <button id="addOrUpdateExpenseButton" onclick="handleExpense()">Add</button>
           <!-- Hint: Use handleExpense() method to manage button click for add/update expense -->
         </div>
 
         <div data-testid="message-wrapper">
-          <!-- Show success or error message here -->
+          <p id="message"></p>
         </div>
       </div>
 

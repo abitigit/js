@@ -1,131 +1,153 @@
-.total-expense-wrapper {
-    display: flex;
-}
-
-
-#expense-tracker-parent {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-#addExpenseRoot {
-    margin-right: 20px;
-}
-
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
 h2 {
+    text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-/* Expense Form Styling */
-[data-testid="add-expense-root"] {
-    background-color: #fff;
+#expense-tracker-parent {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+}
+
+#addExpenseRoot,
+[data-testid="expense-list-root"] {
+    background: #fff;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.25em;
 }
 
 label {
-    margin-bottom: 8px;
-    color: #555;
     display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
 }
 
-input {
+input[type="text"],
+input[type="number"],
+input[type="date"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-button {
+input[type="date"] {
+    position: relative;
+}
+
+#addOrUpdateExpenseButton {
     width: 100%;
     padding: 12px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
-button:hover {
+#addOrUpdateExpenseButton:hover {
     background-color: #45a049;
 }
 
-[data-testid="message-wrapper"] {
-    margin-top: 10px;
-    color: #4caf50;
+#message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
 }
 
-/* Expense List Styling */
-[data-testid="expense-list-root"] {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 400px;
+#message:not(:empty) {
+    color: #2e7d32;
+    background-color: #e8f5e9;
 }
 
+/* Expense List */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
 }
 
-td:last-child {
-    text-align: center;
+td {
+    color: #333;
 }
 
-button.edit, button.delete {
-    padding: 8px;
-    margin-right: 4px;
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 4px;
     cursor: pointer;
+    margin: 2px;
 }
 
-button.edit {
-    background-color: #2196F3;
+.edit-btn {
+    background-color: #007bff;
 }
 
-button.delete {
-    background-color: #f44336;
+.edit-btn:hover {
+    background-color: #0056b3;
 }
 
-/* Total Expense Styling */
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+[data-testid='expense-list-message-wrapper'] {
+    margin-top: 15px;
+    color: #2e7d32;
+}
+
 .total-expense-wrapper {
     margin-top: 20px;
-    text-align: center;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-/* Responsive Design */
-@media (max-width: 500px) {
-    [data-testid="add-expense-root"], [data-testid="expense-list-root"] {
-        width: 90%;
-    }
+#noExpenseMessage {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
 }
+
